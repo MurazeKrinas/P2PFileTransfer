@@ -462,11 +462,13 @@ public class MainUI extends javax.swing.JFrame {
                                 serverThread.start();
                         } catch (Exception e) {
                                 e.printStackTrace();
+                                serverThread = null;
                         }
                 } else if (listenButton.getText().equals("Stop")) {
                         listenButton.setText("Listen");
                         if (serverThread != null)
                                 serverThread.interrupt();
+                                serverThread = null;
                 }
         }// GEN-LAST:event_listenButtonMouseClicked
 
